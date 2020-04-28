@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+	<title>מפל - מורה פרטי לחיים</title>
+
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<link rel="stylesheet" href="plugins/owl-carousel/owl.carousel.css">
+	<script src="plugins/owl-carousel/owl.carousel.js"></script> 
+	
+	<link rel="stylesheet" href="plugins/fancybox/jquery.fancybox.css">
+	<script src="plugins/fancybox/jquery.fancybox.js"></script> 
+	
+	<script src="plugins/scrollreveal/scrollreveal.js"></script> 
+
+	<script src="plugins/autocomplete/autocomplete.js"></script>
+
+	<script src="plugins/circle-chart/circleChart.js"></script> 
+
+
+	<link href='plugins/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+	<link href='plugins/fullcalendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+	<script src='plugins/fullcalendar/lib/moment.min.js'></script>
+	<script src='plugins/fullcalendar/lib/jquery.min.js'></script>
+	<script src='plugins/fullcalendar/fullcalendar.min.js'></script>
+	<script src='plugins/fullcalendar/locale/he.js'></script>
+</head>
+
+<body>
+	<header class="">
+		<div class="header-inner">
+			<div class="cont-logo">
+				<img src="images/index/logo.png" alt="">
+			</div>
+
+			<div class="buttons">
+				<a href="#" class="button">הרשמה</a>
+				<a href="#" class="button">כניסה</a>
+				<a href="#" class="button">כניסת מרצה</a>
+			</div>
+
+			<div class="part-controls">
+				<div class="toggle-button">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="dropdown">
+			<div class="part-top">
+				<p class="line-1">היי,</p>
+				<p class="line-2">אורח</p>
+			</div>
+			<div class="part-content">
+				<div class="menu-buttons">
+					<a href="#" class="menu-button">
+						<i class="fa fa-address-card" aria-hidden="true"></i>
+						<span>הרשמה</span>
+					</a>
+					<a href="#" class="menu-button">
+						<i class="fa fa-sign-in" aria-hidden="true"></i>
+						<span>כניסה</span>
+					</a>
+					<a href="#" class="menu-button">
+						<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+						<span>כניסת מרצה</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="class-name">
+		<div class="section-inner">
+		
+			<div class="container-calendar">
+				<div id='calendar'></div>
+
+				<div class="legend">
+					<div class="item pink">
+						<div class="square"></div>
+						<span>זמין</span>
+					</div>
+					<div class="item white">
+						<div class="square"></div>
+						<span>לא זמין</span>
+					</div>
+					<div class="item yellow">
+						<div class="square"></div>
+						<span>לא זמין</span>
+					</div>
+				</div>
+				<div class="popup" id="calendarPopup">
+					<div class="bg"></div>
+					<div class="inner">
+						<div class="heading">
+							<p class="title">קבעו זמינות</p>
+							<p class="date">יום חמישי 19.03.2020</p>
+							
+						</div>
+						<div class="content">
+							<p class="title">בין השעות:</p>
+							<p class="hours">8:00-9:00</p>
+							<div class="radio-buttons">
+								<label class="radio">
+									<input type="radio" name="status" value="1" checked>
+									<span>זמין</span>
+								</label>
+
+								<label class="radio">
+									<input type="radio" name="status"value="0">
+									<span>לא זמין</span>
+								</label>
+							</div>
+							<div class="info">
+								<p>לורם איפסום דולור סיט אמט, קונסקטורר</p>
+							</div>
+							<div class="button" id="saveEventButton">שמור שינויים</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+
+		<div class="part-top">
+			<div class="section-inner">
+				<div class="cols">
+					<div class="col">
+						<p class="title">מפת אתר</p>
+						<div class="content">
+							<div class="menu-cont">
+								<ul class="menu">
+									<li><a href="">עמוד הבית</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">בלוג</a></li>
+									<li><a href="">יצירת קשר</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">עוד קישור</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<p class="title">לימודי שפות</p>
+						<div class="content">
+							<div class="menu-cont">
+								<ul class="menu">
+									<li><a href="">עמוד הבית</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">בלוג</a></li>
+									<li><a href="">יצירת קשר</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">עוד קישור</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col">
+						<p class="title">שיעורים פרטיים</p>
+						<div class="content">
+							<div class="menu-cont">
+								<ul class="menu">
+									<li><a href="">עמוד הבית</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">בלוג</a></li>
+									<li><a href="">יצירת קשר</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">עוד קישור</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<p class="title">בלוג ומאמרים</p>
+						<div class="content">
+							<div class="menu-cont">
+								<ul class="menu">
+									<li><a href="">עמוד הבית</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">בלוג</a></li>
+									<li><a href="">יצירת קשר</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">עוד קישור</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<p class="title">תמיכה טכנית</p>
+						<div class="content">
+							<div class="menu-cont">
+								<ul class="menu">
+									<li><a href="">עמוד הבית</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">בלוג</a></li>
+									<li><a href="">יצירת קשר</a></li>
+									<li><a href="">אודות</a></li>
+									<li><a href="">קטלוג</a></li>
+									<li><a href="">עוד קישור</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="credit-cont">
+			<p class="copy">© כל הזכויות שמורות למפל - מורה פרטי לחיים</p>
+
+			<p class="credit">
+				<span>עיצוב ובניית אתר ע״י </span>
+				<img src="images/logoextra.png" alt="">
+				<span>דיגיטל</span>
+			</p>
+		</div>
+
+	</footer>
+
+<script>
+  $(document).ready(function() {
+
+  	$(".popup .bg").on("click", function(){
+  		$('#calendar').fullCalendar('unselect');
+      	$('#calendarPopup').fadeOut();
+  	});
+    $('#calendar').fullCalendar({
+		header: {
+			left: 'next, ',
+			center: 'title',
+			right: 'prev'
+		},
+		lang: 'he',
+		defaultDate: '2020-03-28',
+		navLinks: false, // can click day/week names to navigate views
+		selectable: true,
+		selectHelper: false,
+		eventOverlap: false,
+		selectOverlap: false,  
+		displayEventTime: true,
+		defaultView: 'agendaWeek',
+		allDaySlot: false,
+     	slotDuration: '01:00:00', 
+     	slotLabelInterval: '01:00:00',
+     	minTime: "08:00:00",
+		maxTime: "23:00:00",
+		contentHeight: 'auto',
+		timeFormat: "H:mm",
+		slotLabelFormat: "H:mm",
+		editable: false,
+	    eventLimit: true,
+	    dayNamesShort: ["ראשון", "שני", "שלישי", "רביעי", "חמישי", "שישי", "שבת"],
+		select: function(start, end) {
+			$('#removeEventButton').unbind('click');
+      		$('#saveEventButton').unbind('click');
+
+      		$('[name="status"]').val(["1"]);
+      		
+      		var dateStart = moment(start).format('MM.DD.YYYY dddd');
+      		var hoursStart  = moment(start).format('HH') + ":00";
+      		var hoursEnd  = moment(end).format('HH') + ":00";
+    
+      		$('#calendarPopup .date').text(dateStart);
+      		$('#calendarPopup .hours').text(hoursStart + " - " + hoursEnd);
+
+      		$('#calendarPopup').fadeIn();
+
+      		$('#saveEventButton').on('click',function(){
+      			var title = "test";
+      			var status = $('input[name="status"]:checked').val();
+      			var backgroundColor = "";
+      		
+      			//if(status == "0") backgroundColor = "#cccccc";
+
+      			if(status == "1") {
+      				backgroundColor = "#FD367E";
+	      			var difference = end.diff(start, 'hours');
+	      			var events = [];
+	      			for (i = 0; i < difference; i++) {
+	      				var _start = moment(start);
+		               	var mockEvent = {
+		               		title: title, 
+		               		start: moment(_start), 
+		               		end: moment(start.add(1, 'hours')), 
+		               		backgroundColor: backgroundColor,
+		               		status: status,
+		               		new: 1
+		               	}
+		               	events.push(mockEvent);
+	                }
+	                $('#calendar').fullCalendar("addEventSource", events);
+	            }
+
+	            storeEvents();
+                $('#calendarPopup').fadeOut();
+           });
+
+      		
+      		$('#removeEventButton').hide();
+  		},
+
+		eventClick: function(calEvent, jsEvent, view) {	
+			$('#removeEventButton').unbind('click');
+      		$('#saveEventButton').unbind('click');
+
+			$('[name="status"]').val([calEvent.status]);
+
+			var dateStart = moment(calEvent.start).format('MM.DD.YYYY dddd');
+      		var hoursStart  = moment(calEvent.start).format('HH') + ":00";
+      		var hoursEnd  = moment(calEvent.end).format('HH') + ":00";
+    
+      		$('#calendarPopup .date').text(dateStart);
+      		$('#calendarPopup .hours').text(hoursStart + " - " + hoursEnd);
+			$('#calendarPopup').fadeIn();
+
+			$('#saveEventButton').on('click',function() {
+
+      			var title = "";
+      			var status = $('input[name="status"]:checked').val();
+      			var backgroundColor = "";
+      			if(status == "1") {
+	      			backgroundColor = "#FD367E";
+	               	calEvent.status = status;
+	               	calEvent.new = 1;
+	               	calEvent.backgroundColor = backgroundColor;
+	               	$('#calendar').fullCalendar('updateEvent', calEvent);
+	            }
+	            if(status == "0") {
+	            	$('#calendar').fullCalendar('removeEvents', calEvent._id);
+	            }
+	            storeEvents();
+                $('#calendarPopup').fadeOut();
+           });
+			/*
+			$('#removeEventButton').show();
+			$('#removeEventButton').on('click',function(){
+				$('#calendar').fullCalendar('removeEvents', calEvent._id);
+				$('#calendarPopup').fadeOut();
+			});
+			*/
+		},
+    });
+
+  });
+
+	function storeEvents() {
+		var allEvents =  $('#calendar').fullCalendar('clientEvents');
+		var eventsForExport = [];
+		allEvents.forEach(function(e){
+			if(e.new == 1) {
+				var event = {
+					start: moment(e.start, moment.defaultFormat).format(),
+					end: moment(e.end, moment.defaultFormat).format(),
+				}
+
+				eventsForExport.push(event);
+			}
+		});
+		var eventsForExportStr = JSON.stringify(eventsForExport);
+		console.log(eventsForExportStr);
+	}
+
+</script>
+
+</body>
+</html>
