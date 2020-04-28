@@ -585,6 +585,20 @@
 	    	});
 	    });
 
+
+	    $(".field .field-title").on("click", function(){
+			var that = $(this).closest(".field");
+			$(this).closest(".field").find("input").val("");
+			$("#search_subject_field").keyup();
+			
+			$(".field").each(function(){
+				if($(this)[0] == that[0]) $(this).find(".dropdown").toggleClass("open");
+				else $(this).find(".dropdown").removeClass("open");
+			});
+			
+
+		});
+
 	    $('#calendar').fullCalendar({
 			header: {
 				left: 'next, ',

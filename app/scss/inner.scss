@@ -2648,7 +2648,7 @@ section.search-fields {
 		.field {
 			text-align: center;
 			flex-grow: 1;
-    		flex-basis: 0;
+    		
     		max-width: 180px;
     		border-left: 1px solid #D7D8D9;
 			text-align: center;
@@ -2748,6 +2748,7 @@ section.search-fields {
 		    padding: 10px 10px;
 		    text-align: center;
 		    transition: all 0.2s;
+		    white-space: nowrap;
 		    &:hover {	
     			background-color: #f6f7f9;
 		    }
@@ -2909,6 +2910,10 @@ section.search-fields {
 	}
 
 	@media only screen and (max-width : $mw) {
+		.range-dropdown {
+			right: auto;
+			left: 0;
+		}
 		.fields {
 			justify-content: center;
 			.field {
@@ -2918,6 +2923,28 @@ section.search-fields {
 				}
 				
 			}
+		}
+	}
+
+	@media only screen and (max-width : 600px) {
+		.fields {
+			flex-wrap: wrap;
+			.field {
+				max-width: 100%;
+				width: 100%;
+				border: 1px solid #D7D8D9;
+				border-bottom: none;
+				&:first-child {
+					border-top: none;
+				}
+			}
+		}
+
+		.range-dropdown {
+			width: 100%;
+		}
+		.container-options {
+			width: 100%;
 		}
 	}
 }
